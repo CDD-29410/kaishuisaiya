@@ -1,8 +1,8 @@
-#git是什么
+# git是什么
 集中式版本控制系统（cvcs）=>svn
 分布式版本控制系统（dvcs）=>git
 
-#git 的作用
+# git的作用
 在项目开发的进程中 对值得记录的时间节点进行“备份”方便后期恢复(后悔药)
 方便团队协作开发
 
@@ -35,10 +35,22 @@ git config user.email
 git status
 ```
 
-
-
 ```
 git add .将所有文件放到暂存区(经常做的)
-git commit -m "提交信息”将暂存区文件提交到仓库（某个功能完成的时候/在必要时候提交)
+git commit -m "提交信息”将暂存区文件提交到仓库（某个功能完成的时候/在必要时候提交）
 ```
 
+【工作区】——git add ——→【暂存区】—— git commit -m “xxxx"———【repo】
+【工作区】——git commit -a -m“xxx”——【repo】 (vim编辑器操作)
+
+git reset  -soft commit_id 将当前版本的内容回调到暂存区
+git reset --hard commit_id  将当前版本的内容删除
+git reset commit_id（默认）将当前版本的内容回退工作区
+
+HEAD  →当前版本
+HEAD^ →当前版本的上一个版本
+HEAD ～n  →当前版本的上 n个版本
+【暂存区】<— git reset --soft commit_id ——【repo】
+【工作区】<— git reset commit_id ——【repo】
+【移除】<— git reset --hard commit_id ——【repo】
+# kaishuisaiya
